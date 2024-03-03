@@ -22,7 +22,7 @@ public class ProdukAdapter extends ArrayAdapter<Produk> {
     Context context;
 
     public ProdukAdapter(ArrayList<Produk> produkArrayList, Context context) {
-        super(context, R.layout.item_list_layout,produkArrayList);
+        super(context, R.layout.list_activity,produkArrayList);
         this.produkArrayList = produkArrayList;
         this.context = context;
     }
@@ -44,7 +44,7 @@ public class ProdukAdapter extends ArrayAdapter<Produk> {
         if(convertView==null) {
             myViewFolder = new MyViewFolder();
             LayoutInflater inflater = LayoutInflater.from(getContext());
-            convertView = inflater.inflate(R.layout.item_list_layout, parent, false);
+            convertView = inflater.inflate(R.layout.list_activity, parent, false);
 
             myViewFolder.imageProduk = (ImageView) convertView.findViewById(R.id.imageProduk);
             myViewFolder.txtNamaProduk = (TextView) convertView.findViewById(R.id.txtNamaProduk);
